@@ -16,12 +16,15 @@ class ClassComponent extends React.Component {
   render() {
     return (
       <div className="component class">
-        <h3>Counter App using Class Component : </h3>
+        <h3>{this.props.title}</h3>
         <h2> {this.state.count}</h2>
         <button onClick={this.increase}> Add</button>
       </div>
     );
   }
 }
+ClassComponent.defaultProps = {
+  title: "Counter App using Class Component :",
+};
 
 export default ClassComponent;
