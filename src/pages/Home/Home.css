@@ -1,0 +1,19 @@
+.Comps{
+    display:flex;
+    justify-content: space-around;
+
+}
+h1{
+    text-decoration: underline overline;
+}
+
+.component{
+    margin:10px;
+    padding: 30px;
+    background-color: rgba(245, 199, 14, 0.875);
+    border: 2px dashed rgb(254, 137, 41);
+
+}
+button{
+   align-self: center;
+}
