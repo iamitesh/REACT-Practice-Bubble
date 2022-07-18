@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-const FunctionalComp = () => {
-  const [count, setCount] = useState(0);
+const FunctionalComp = (props) => {
+  const [count, setCount] = useState(props.initialValue);
 
   const increase = () => {
     setCount(count + 1);
   };
 
   return (
-    <div class="component function">
+    <div className="component function">
       <h3>Counter App using Functional Component : </h3>
       <h2>{count}</h2>
       <button onClick={increase}>Add</button>
@@ -17,3 +18,6 @@ const FunctionalComp = () => {
 };
 
 export default FunctionalComp;
+FunctionalComp.propTypes = {
+  initialValue: PropTypes.oneOf([0, 2, 4]),
+};

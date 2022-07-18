@@ -6,7 +6,7 @@ function Home() {
     <div className="Home">
       <h2>Functional and Class component counter</h2>
       <div className="Comps">
-        <FunctionalComp />
+        <FunctionalComp initialValue={4} />
         <ClassComponent />
       </div>
     </div>
