@@ -15,7 +15,7 @@ class ClassComponent extends React.Component {
 
   render() {
     return (
-      <div class="component class">
+      <div className="component class">
         <h3>Counter App using Class Component : </h3>
         <h2> {this.state.count}</h2>
         <button onClick={this.increase}> Add</button>
