@@ -1,4 +1,4 @@
-.Comps{
+.Comps,.temprature-pair{
     display:flex;
     justify-content: space-around;
 
@@ -6,8 +6,11 @@
 h1{
     text-decoration: underline overline;
 }
+h2 {
+    text-decoration: underline ;
+}
 
-.component{
+.component,.temprature-pair{
     margin:10px;
     padding: 30px;
     background-color: rgba(245, 199, 14, 0.875);
@@ -16,4 +19,8 @@ h1{
 }
 button{
    align-self: center;
+}
+
+.CompComposition{
+    text-align: left;
 }
