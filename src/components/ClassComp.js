@@ -12,6 +12,28 @@ class ClassComponent extends React.Component {
   increase() {
     this.setState({ count: this.state.count + 1 });
   }
+  componentDidMount() {
+    console.log(
+      "Behavior before the component is added to the DOM in Class Comp."
+    );
+  }
+  componentDidUpdate() {
+    console.log(
+      "Behavior when the component receives new state or props in Class Comp."
+    );
+  }
+
+  //  conditional-componentDidUpdate
+  // componentDidUpdate(prevProps) {
+  //   if (this.state.count !== prevState.foo) {
+  //     console.log("Behavior when the value of 'foo' changes.");
+  //   }
+  // }
+  componentWillUnmount() {
+    console.log(
+      "Behavior right before the component is removed from the DOM in Class Comp."
+    );
+  }
 
   render() {
     return (
