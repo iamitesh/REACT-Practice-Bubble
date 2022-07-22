@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 const FunctionalComp = (props) => {
   const [count, setCount] = useState(props.initialValue);
+  // Unlike componentDidMount or componentDidUpdate, effects scheduled with useEffect don’t block the browser from updating the screen. This makes your app feel more responsive. The majority of effects don’t need to happen synchronously.
 
   //componentDidMount.
   //  the empty array [] as the second argument, that informs the useEffect Hook that it only needs to execute once, when the component mounts
@@ -42,7 +43,7 @@ const FunctionalComp = (props) => {
   return (
     <div className="component function">
       <h3>Counter App using Functional Component : </h3>
-      <h2>{count}</h2>
+      <p>{count}</p>
       <button onClick={increase}>Add</button>
     </div>
   );
