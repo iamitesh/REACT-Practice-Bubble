@@ -24,3 +24,6 @@ button{
 .CompComposition{
     text-align: left;
 }
+.focus{
+    outline:2px solid ;
+}
