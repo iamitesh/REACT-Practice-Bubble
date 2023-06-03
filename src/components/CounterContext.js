@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CounterState(props){
+function CounterContext(){
     const [count, setCount] =useState(0);
     const increment=()=>{
         setCount(count+1)
@@ -9,14 +9,18 @@ function CounterState(props){
         setCount(count-1)
 
     }
-  return (<>
-    <div className="CounterState">
-    <h2>{props.countername}</h2>
+  return (
+    <UserContext.Consumer>
+      {value => <h1>{value}</h1>} 
+      {/* prints: Reed */}
+      <div className="CounterState">
+      <h2>{props.countername}</h2>
     <div className="Count">{count}</div>
     <button onClick={increment}>Increment</button>
     <button onClick={decrement}>Decrement</button>
-    </div></>
+    </div>
+    </UserContext.Consumer>
   );
 }
 
-export default CounterState;
+export default CounterContext;
