@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import CounterState from './counter/CounterState';
-import CounterContext from './counter/CounterContext';
-import LiftingStateCounter from './counter/LiftingStateCounter';
+
+import { BrowserRouter as Router, Route, Routes, Link,Outlet } from 'react-router-dom';
+
 export const UserContext = React.createContext();
 
 const Counter = () => {
@@ -16,11 +16,26 @@ const Counter = () => {
   return (
     <div>
       <h2>Counter</h2>
-      <CounterState countername={"State Counter"} />
-      <UserContext.Provider value={0}>
-        <CounterContext countername={"Context Counter"} />
-      </UserContext.Provider>
-      <LiftingStateCounter countername={"Lifting Counter"} count={count} increment={increment} decrement={decrement} />
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/counter/state-counter"> State Counter</Link>
+            </li>
+            <li>
+              <Link to="/counter/context-counter">Context Counter</Link>
+            </li>
+            <li>
+              <Link to="/counter/liftState-counter">Lift Counter</Link>
+            </li>
+          </ul>
+        </nav>
+        <>
+          <h4>Counter Apps</h4>
+          <Outlet />
+        </>
+
+      </div>
     </div>
   );
 };
