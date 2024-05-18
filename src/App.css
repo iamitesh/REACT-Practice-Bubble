@@ -2,3 +2,8 @@
     box-sizing: border-box;
     text-align: center;
 }
+nav li{
+    background-color: blue;
+    color: white;
+    padding:30px;
+}
