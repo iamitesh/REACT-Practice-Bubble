@@ -8,6 +8,7 @@ import CounterState from '../counter/CounterState';
 import CounterContext from '../counter/CounterContext';
 import LiftingStateCounter from '../counter/LiftingStateCounter';
 import "../../App.css"
+import Users from '../Users';
 export const UserContext = React.createContext();
 
 const Tabs = () => {
@@ -35,6 +36,9 @@ const Tabs = () => {
             <li>
               <Link to="/stopwatch">Stopwatch</Link>
             </li>
+            <li>
+              <Link to="/user">User</Link>
+            </li>
           </ul>
         </nav>
         <>
@@ -53,6 +57,8 @@ const Tabs = () => {
             </Route>
             <Route path="/digital-clock" element={<DigitalClock />} />
             <Route path="/stopwatch" element={<Stopwatch />} />
+            <Route path="/user" element={<Users />} />
+
           </Routes>
         </>
 
