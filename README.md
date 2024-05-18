@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBzPOLRWq_fo8_SDo-Hf6ns-lxGJM14s6I",
+  authDomain: "react-practice-bubble.firebaseapp.com",
+  projectId: "react-practice-bubble",
+  storageBucket: "react-practice-bubble.appspot.com",
+  messagingSenderId: "381355207558",
+  appId: "1:381355207558:web:9bf6dabfcbb5326ccfda07",
+  measurementId: "G-9815E5QGDZ"
+};
