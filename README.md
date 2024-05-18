@@ -4,6 +4,7 @@ In this Project we are going to see different mini projects that can be asked in
       i)Count using state
      ii)Count using react context
     iii)Count using concept of Lifting Up state
+    Inside Counter we have Nested Routing implemented using React-router-dom
 
 2. Digital CLick
     Simple implementation of Digital clock with takes in new vaalue using of time from new Date().toLocaleTimeString() and updates it using setInvwerval
