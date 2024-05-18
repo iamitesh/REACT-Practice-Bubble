@@ -22,7 +22,7 @@ const Users = () => {
     }
   };
 
-  
+
   useEffect(() => {
     fetchUsers()
   }, [])
@@ -44,11 +44,35 @@ const Users = () => {
         value={searchQuery}
         onChange={handleInputChange}
       />
-      {filteredData.map((user,index) => (
-        <p key={index}>{user.name}</p>
-      ))}
+      <div className='cards'>
+        {filteredData.map((user, index) => (
+          <UserCard key={index} user={user} />
+        ))}
+      </div>
+
     </>
   );
 };
+
+const UserCard = (userobj, index) => {
+  const { user } = userobj
+  return (
+    <div className='card-wrapper' key={index}>
+      <h5>{user.name}</h5>
+      <div className='emailWrap'>
+        <div className='label'>Email </div>
+        <div className='name'>: {user?.name}</div>
+      </div>
+      <div className='websiteWrap'>
+        <div className='label'>Website </div>
+        <div className='website'>: {user?.website}</div>
+      </div>
+      <div className='companyWrap'>
+        <div className='label'>Company</div>
+        <div className='website'>: {user?.company?.name}</div>
+      </div>
+    </div>
+  )
+}
 
 export default Users;
