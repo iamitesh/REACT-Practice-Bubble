@@ -42,7 +42,6 @@ const Tabs = () => {
           </ul>
         </nav>
         <>
-          <h4>Mini Apps</h4>
           <Routes>
             <Route path="/counter" element={<Counter />} >
               {/* <Routes> */}

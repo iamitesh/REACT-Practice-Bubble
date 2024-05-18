@@ -4,10 +4,11 @@
 }
 nav ul  {
     background-color: rgb(143, 218, 225);
-    padding:10px;
+    padding:10px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 5px 0px;
 }
 nav ul li{
     background-color: blue;

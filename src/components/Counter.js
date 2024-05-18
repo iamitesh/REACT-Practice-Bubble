@@ -15,7 +15,6 @@ const Counter = () => {
   }
   return (
     <div>
-      <h2>Counter</h2>
       <div>
         <nav>
           <ul>
@@ -30,11 +29,7 @@ const Counter = () => {
             </li>
           </ul>
         </nav>
-        <>
-          <h4>Counter Apps</h4>
-          <Outlet />
-        </>
-
+        <Outlet />
       </div>
     </div>
   );
