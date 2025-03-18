@@ -9,6 +9,8 @@ import CounterContext from '../counter/CounterContext';
 import LiftingStateCounter from '../counter/LiftingStateCounter';
 import "../../App.css"
 import Users from '../Users';
+import MachineCoding from '../MachineCoding';
+import Accordion from '../Accordion';
 export const UserContext = React.createContext();
 
 const Tabs = () => {
@@ -28,6 +30,9 @@ const Tabs = () => {
         <nav>
           <ul>
             <li>
+              <Link to="/machine-coding">Machine Coding</Link>
+            </li>
+            <li>
               <Link to="/counter">Counter</Link>
             </li>
             <li>
@@ -43,24 +48,24 @@ const Tabs = () => {
         </nav>
         <>
           <Routes>
+            <Route path="/machine-coding" element={<MachineCoding/>} >
+              <Route path="/machine-coding/t1" element={<div><Accordion/></div>} />
+              <Route path="/machine-coding/t2" element={<div>MC-t2</div>} />
+            </Route>
             <Route path="/counter" element={<Counter />} >
-              {/* <Routes> */}
-                <Route path="/counter/state-counter" element={<CounterState countername={"State Counter"} />} />
-                <Route path="/counter/context-counter" element={
-                  <UserContext.Provider value={0}>
-                    <CounterContext countername={"Context Counter"} />
-                  </UserContext.Provider>
-                } />
-                <Route path="/counter/liftState-counter" element={<LiftingStateCounter countername={"Lifting Counter"} count={count} increment={increment} decrement={decrement} />} />
-              {/* </Routes> */}
+              <Route path="/counter/state-counter" element={<CounterState countername={"State Counter"} />} />
+              <Route path="/counter/context-counter" element={
+                <UserContext.Provider value={0}>
+                  <CounterContext countername={"Context Counter"} />
+                </UserContext.Provider>
+              } />
+              <Route path="/counter/liftState-counter" element={<LiftingStateCounter countername={"Lifting Counter"} count={count} increment={increment} decrement={decrement} />} />
             </Route>
             <Route path="/digital-clock" element={<DigitalClock />} />
             <Route path="/stopwatch" element={<Stopwatch />} />
             <Route path="/user" element={<Users />} />
-
           </Routes>
         </>
-
       </div>
     </Router>
   );
