@@ -96,3 +96,62 @@ button{
     display: flex;
     flex-direction: column;
   }
+  /* counter.css */
+
+.counter-container {
+    font-family: sans-serif;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .counter-nav {
+    margin-bottom: 20px;
+  }
+  
+  .counter-nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .counter-nav-item {
+    margin: 0;
+  }
+  
+  .counter-nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .counter-nav-link:hover {
+    background-color: #7eacaf;
+    color: white;
+  }
+  
+  .counter-content {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+
+  
+/* nested-checkbox.css */
+
+.checkbox-tree-container {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.checkbox-tree-item {
+  /* Removed marginLeft here, now set inline */
+}
+
+.checkbox-tree-children {
+  /* Removed marginLeft here, now set inline */
+}
