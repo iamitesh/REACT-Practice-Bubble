@@ -1,3 +1,4 @@
+Deployed on Vercel :https://react-practice-bubble-git-master-amiteshs-projects-4caec389.vercel.app/
 In this Project we are going to see different mini projects that can be asked in an interview. To start with we have these list on items working in application.
 
 1. Counter
