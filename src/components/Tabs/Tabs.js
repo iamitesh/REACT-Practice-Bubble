@@ -11,6 +11,7 @@ import Users from '../Users';
 import MachineCoding from '../MachineCoding';
 import Accordion from '../Accordion';
 import NestedCheckbox from '../NestedCheckbox';
+import ProgressBar from '../ProgressBar';
 export const UserContext = React.createContext();
 
 const Tabs = () => {
@@ -61,6 +62,7 @@ const Tabs = () => {
             <Route path="/machine-coding" element={<MachineCoding />} >
               <Route path="/machine-coding/t1" element={<div><Accordion /></div>} />
               <Route path="/machine-coding/t2" element={<div><NestedCheckbox/></div>} />
+              <Route path="/machine-coding/t3" element={<div><ProgressBar/></div>} />
             </Route>
             <Route path="/counter" element={<Counter />} >
               <Route path="/counter/state-counter" element={<CounterState countername={"State Counter"} />} />

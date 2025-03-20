@@ -17,6 +17,9 @@ const MachineCoding = () => {
             <li>
               <Link to="/machine-coding/t2">Nested checkboxes</Link>
             </li>
+            <li>
+              <Link to="/machine-coding/t3">Progress Bar</Link>
+            </li>
           </ul>
         </nav>
         <Outlet />
