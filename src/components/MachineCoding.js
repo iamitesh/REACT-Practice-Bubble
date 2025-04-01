@@ -19,6 +19,9 @@ const MachineCoding = () => {
             </li>
             <li>
               <Link to="/machine-coding/t3">Progress Bar</Link>
+            </li>            
+            <li>
+              <Link to="/machine-coding/t4">Recursive Form structure</Link>
             </li>
           </ul>
         </nav>

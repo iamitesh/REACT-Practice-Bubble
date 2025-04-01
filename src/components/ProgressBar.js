@@ -11,7 +11,7 @@ const ProgressBar = () => {
   }, []);
 
   return (
-    <div style={{ width: "100%", background: "#e0e0e0", borderRadius: "10px", overflow: "hidden" }}>
+    <div style={{ width: "100%", background: "#e0e0e0", borderRadius: "10px", overflow: "hidden", paddingnLeft:'10px' }}>
       <div
         style={{
           width: `${progress}%`,

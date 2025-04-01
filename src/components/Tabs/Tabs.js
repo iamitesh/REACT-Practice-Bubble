@@ -12,6 +12,7 @@ import MachineCoding from '../MachineCoding';
 import Accordion from '../Accordion';
 import NestedCheckbox from '../NestedCheckbox';
 import ProgressBar from '../ProgressBar';
+import RecursiveForm from '../MultiLevelForm';
 export const UserContext = React.createContext();
 
 const Tabs = () => {
@@ -24,6 +25,67 @@ const Tabs = () => {
   const decrement = () => {
     setCount(count - 1);
   };
+  const formData=[
+    {
+      "id": "1",
+      "label": "Personal Information",
+      "children": [
+        {
+          "id": "1.1",
+          "label": "First Name",
+          "children": []
+        },
+        {
+          "id": "1.2",
+          "label": "Last Name",
+          "children": []
+        },
+        {
+          "id": "1.3",
+          "label": "Contact Details",
+          "children": [
+            {
+              "id": "1.3.1",
+              "label": "Email",
+              "children": []
+            },
+            {
+              "id": "1.3.2",
+              "label": "Phone Number",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "label": "Address",
+      "children": [
+        {
+          "id": "2.1",
+          "label": "Street",
+          "children": []
+        },
+        {
+          "id": "2.2",
+          "label": "City",
+          "children": []
+        },
+        {
+          "id": "2.3",
+          "label": "State",
+          "children": []
+        },
+        {
+          "id": "2.4",
+          "label": "Zip Code",
+          "children": []
+        }
+      ]
+    }
+  ]
+  
 
   return (
     <Router>
@@ -63,6 +125,7 @@ const Tabs = () => {
               <Route path="/machine-coding/t1" element={<div><Accordion /></div>} />
               <Route path="/machine-coding/t2" element={<div><NestedCheckbox/></div>} />
               <Route path="/machine-coding/t3" element={<div><ProgressBar/></div>} />
+              <Route path="/machine-coding/t4" element={<div><RecursiveForm data={formData}/></div>} />
             </Route>
             <Route path="/counter" element={<Counter />} >
               <Route path="/counter/state-counter" element={<CounterState countername={"State Counter"} />} />
