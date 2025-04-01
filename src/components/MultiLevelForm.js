@@ -1,43 +1,41 @@
 import { useState } from "react";
 
 const RecursiveForm = ({ data }) => {
-  const [selectedId, setSelectedId] = useState(null);
+  const [openNodes, setOpenNodes] = useState({});
+
+  const toggleNode = (id) => {
+    setOpenNodes((prev) => ({
+      ...prev,
+      [id]: !prev[id], // Toggle the open state for this node
+    }));
+  };
 
   return (
-    <div className="space-y-2">
+    <div className="">
       {data.map((item) => (
-        <FormNode key={item.id} item={item} selectedId={selectedId} setSelectedId={setSelectedId} />
+        <FormNode key={item.id} item={item} openNodes={openNodes} toggleNode={toggleNode} />
       ))}
     </div>
   );
 };
 
-const FormNode = ({ item, selectedId, setSelectedId }) => {
+const FormNode = ({ item, openNodes, toggleNode }) => {
   const hasChildren = item.children && item.children.length > 0;
-  const isOpen = selectedId === item.id;
-
-  const handleChange = () => {
-    setSelectedId(isOpen ? null : item.id);
-  };
+  const isOpen = openNodes[item.id] || false;
 
   return (
-    <div className="pl-4 border-l border-gray-300">
+    <div className="">
       {hasChildren && (
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="radio"
-            name="form-radio"
-            onChange={handleChange}
-            checked={isOpen}
-          />
+        <label className="">
+          <input type="checkbox" onChange={() => toggleNode(item.id)} checked={isOpen} />
           <span>{item.label}</span>
         </label>
       )}
       {!hasChildren && <span>{item.label}</span>}
       {isOpen && hasChildren && (
-        <div className="ml-4 border-l pl-2 mt-2">
+        <div className="">
           {item.children.map((child) => (
-            <FormNode key={child.id} item={child} selectedId={selectedId} setSelectedId={setSelectedId} />
+            <FormNode key={child.id} item={child} openNodes={openNodes} toggleNode={toggleNode} />
           ))}
         </div>
       )}
